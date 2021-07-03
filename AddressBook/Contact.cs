@@ -6,22 +6,26 @@ using System.Threading.Tasks;
 
 namespace AddressBook
 {
-    class AddressesBook
+    class PersonDetails
     {
+
         public static List<Person> People = new List<Person>();
         public class Person
         {
             public string FirstName { get; set; }
             public string LastName { get; set; }
-            public string Addressess { get; set; }
+            public string PhoneNumber { get; set; }
+            public string Addresses { get; set; }
             public string City { get; set; }
             public string State { get; set; }
-            public string PhoneNumber { get; set; }
             public string ZipCode { get; set; }
-            public string Email { get; set; }
-
+            public string PhoneNum { get; set; }
+            public string EmailId { get; set; }
         }
-        private static void GetPerson()
+
+
+
+        public static void GetCustomer()
         {
             Person person = new Person();
 
@@ -32,7 +36,7 @@ namespace AddressBook
             person.LastName = Console.ReadLine();
 
             Console.Write("Enter Address : ");
-            person.Addressess = Console.ReadLine();
+            person.Addresses = Console.ReadLine();
 
             Console.Write("Enter City : ");
             person.City = Console.ReadLine();
@@ -42,8 +46,13 @@ namespace AddressBook
 
             Console.Write("Enter ZipCode: ");
             person.ZipCode = Console.ReadLine();
-            Console.Write("Enter ZipCode: ");
-            person.Email = Console.ReadLine();
+
+            Console.Write("Enter Phone Number: ");
+            person.PhoneNum = Console.ReadLine();
+
+            Console.Write("Enter EmailId: ");
+            person.EmailId = Console.ReadLine();
+
             People.Add(person);
         }
         public static void PrintCustomer(Person person)
@@ -51,12 +60,12 @@ namespace AddressBook
             Console.WriteLine("First Name: " + person.FirstName);
             Console.WriteLine("Last Name: " + person.LastName);
             Console.WriteLine("Phone Number: " + person.PhoneNumber);
-            Console.WriteLine("Address : " + person.Addressess);
+            Console.WriteLine("Address : " + person.Addresses);
             Console.WriteLine("City : " + person.City);
             Console.WriteLine("State : " + person.State);
             Console.WriteLine("ZipCode : " + person.ZipCode);
-            Console.WriteLine("Phone Number: " + person.PhoneNumber);
-            Console.WriteLine("EmailId: " + person.Email);
+            Console.WriteLine("Phone Number: " + person.PhoneNum);
+            Console.WriteLine("EmailId: " + person.EmailId);
             Console.WriteLine("-------------------------------------------");
         }
         public static void ListingPeople()
@@ -77,12 +86,9 @@ namespace AddressBook
         }
 
 
-        static void Main(string[] args)
-        {
-            AddressBook.AddressesBook.GetPerson();
-            AddressBook.AddressesBook.ListingPeople();
 
 
-        }
+
     }
+    
 }
