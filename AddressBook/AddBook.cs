@@ -13,7 +13,7 @@ namespace AddressBook
             AddressBook.AddrBook.GetCustomer();
             AddressBook.AddrBook.Modify();
             AddressBook.AddrBook.ListingPeople();
-            // Sample.AddrBook.RemovePeople();
+            AddressBook.AddrBook.RemovePeople();
 
         }
     }
